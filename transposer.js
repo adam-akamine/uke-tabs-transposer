@@ -1,8 +1,10 @@
-'use strict';
-
 const song = require('./mia_and_sebastian_theme');
 
 const songArr = song.MIA_AND_SEBASTIAN_THEME.split('');
+
+function getChord(tab) {
+
+}
 let newChord = '-';
 const transposed = songArr.map((c, i) => {
 	if (parseInt(c) >= 0) {
@@ -14,6 +16,6 @@ const transposed = songArr.map((c, i) => {
 		newChord += '\n';
 	}
 	return newChord;
-})
+});
 
 console.log(transposed.join(''));
