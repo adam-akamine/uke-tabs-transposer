@@ -1,8 +1,10 @@
 'use strict';
 
+const _ = require('lodash');
 const song = require('./mia_and_sebastian_theme');
 
 const songArr = song.MIA_AND_SEBASTIAN_THEME.split('');
+
 const notesLow = {
   C: {
     stringLine: 3,
@@ -96,10 +98,16 @@ const notesMid = {
     fret: 13,
   }
 }
-function getChord(tab) {
 
+function getChord(tab) {
+  let chordsOnly = tab;
+  _.pull(chordsOnly, '-', '(X2)');
 }
+
 let newChord = '-';
+let notesOnly = songArr;
+getChord(notesOnly);
+console.log('notesOnly: ', notesOnly.join('\n'));
 const transposed = songArr.map((c, i) => {
 	if (parseInt(c) >= 0) {
 		newChord = (parseInt(c) + 3).toString();

@@ -19,7 +19,8 @@
   "homepage": "https://github.com/kekuso/uke-tabs-transposer#readme",
   "dependencies": {
     "eslint": "^3.19.0",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",
